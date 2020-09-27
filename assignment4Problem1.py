@@ -13,6 +13,7 @@ def songPart2(animal):
 
 def songPart34(animalNoise):
 # This is the third and fourth line of the song
+# You don't have to replace. Just use the variable in the output.
     a2= "With a moo, moo here  a moo, moo there."
     b2="Here a moo, there a moo, everywhere a moo, moo."
     a2=(a2.replace("moo", animalNoise))
