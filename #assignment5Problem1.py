@@ -10,7 +10,7 @@ def main():
         print ("Speed is legal")
     else:
         fine = 50 + ((givenSpeed- speedLimit) *5)
-        if speedLimit > 90:
+        if givenSpeed > 90: # JA
             fine = fine + 200
         print ("The fine is", fine)
     
