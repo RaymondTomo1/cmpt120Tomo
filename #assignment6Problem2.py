@@ -6,6 +6,7 @@ def isEven (num):
     else:
         return False
 
+# JA: 1 is not a prime number
 def main():
     num1 = int(input("Insert an even number into the program:"))
     if isEven(num1) == True:
