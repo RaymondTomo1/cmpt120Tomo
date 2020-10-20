@@ -18,6 +18,7 @@ def not_g(a):
     else:
         return 1
 
+# These two you had to do with the previous gates
 def nand_g(a,b):
     if a ==1 and b == 1:
         return 0
