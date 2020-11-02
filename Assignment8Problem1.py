@@ -10,13 +10,14 @@ die3 = 0
 die4 = 0
 die5 = 0
 
-die1= randrange(1,6)
-die2= randrange(1,6)
-die3= randrange(1,6)
-die4= randrange(1,6)
-die5= randrange(1,6)
+die1= randrange(1,7)
+die2= randrange(1,7)
+die3= randrange(1,7)
+die4= randrange(1,7)
+die5= randrange(1,7)
 
 def main():
+    # You have to keep the statistics
     print ("Your rolls are:", die1, die2,die3,die4,die5)
     if (die1 == die2 == die3 == die4 == die5):
         print ("Congratulations, you rolled five of a kind!")
