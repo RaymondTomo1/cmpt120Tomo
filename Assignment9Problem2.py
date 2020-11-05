@@ -4,6 +4,10 @@ import math
 
 import graphics
 
+import random
+
+from random import*
+
 from graphics import*
 
 
@@ -196,7 +200,9 @@ def main():
         cball= Projectile(angle,vel,height)
         shot = ShotTracker(win, angle,vel,height)
         shotFollow = Tracker(win, shot)
-        targetOne = Target(win, Point(50,10), 20, 20)
+        targetX = randrange (10, 205)
+        targetY= randrange (10, 150)
+        targetOne = Target(win, Point(50, 100),10, 10)
         targetOne.activate()
         while 0 <= shot.getY() and -10 < shot.getX() <= 210:
             shot.update(1/50)
