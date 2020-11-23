@@ -126,26 +126,35 @@ def main():
     notButton= Button(logicBoard, Point(30, 150), 50, 50, "NOT" )
     xorButton= Button(logicBoard, Point(30, 210), 50, 50, "XOR" )
     nandButton= Button(logicBoard, Point(30, 270), 50, 50, "NAND" )
+    quitButton= Button(logicBoard, Point(30, 330), 50, 50, "QUIT" )
     #-Draw Events
     andButton.activate()
     orButton.activate()
     notButton.activate()
     xorButton.activate()
     nandButton.activate()
+    quitButton.activate()
     clickpoint = logicBoard.getMouse()
     clickX= int(clickpoint.getX())
     clickY= int(clickpoint.getY())
     pt = logicBoard.getMouse()
-    if andButton.clicked(pt):
-        draw_and(clickX,clickY,50,logicBoard)
-    elif orButton.clicked(pt):
-        draw_or(clickX,clickY,50,logicBoard)
-    elif notButton.clicked(pt):
-        draw_not(clickX,clickY,50,logicBoard)
-    elif xorButton.clicked(pt):
-        draw_xor(clickX,clickY,50,logicBoard)
-    elif nandButton.clicked(pt):
-        draw_nand(clickX,clickY,50,logicBoard)
+    while not quitButton.clicked(pt):
+        if andButton.clicked(pt):
+            pt = logicBoard.getMouse()
+            draw_and(pt.getX(),pt.getY(),50,logicBoard)
+        elif orButton.clicked(pt):
+            pt = logicBoard.getMouse()
+            draw_or(pt.getX(),pt.getY(),50,logicBoard)
+        elif notButton.clicked(pt):
+            pt = logicBoard.getMouse()
+            draw_not(pt.getX(),pt.getY(),50,logicBoard)
+        elif xorButton.clicked(pt):
+            pt = logicBoard.getMouse()
+            draw_xor(pt.getX(),pt.getY(),50,logicBoard)
+        elif nandButton.clicked(pt):
+            pt = logicBoard.getMouse()
+            draw_nand(pt.getX(),pt.getY(),50,logicBoard)
+        pt = logicBoard.getMouse()
     
 
 main()
