@@ -75,7 +75,7 @@ def draw_nand(x,y,size,win):
 
 class DigitalValue:
     def __init__ (self,p,value):
-        self.p = Point(p.getX(),p.getY())
+        self.p = p # Point(p.getX(),p.getY())
         self.value = int(value)
     
     def getValue(self):
@@ -98,6 +98,7 @@ class And:
         self.p = Point(p.getX(),p.getY())
         self.a = a
         self.b= b
+        # The output should also de stored
     
     def setA (self,a):
         self.a = a
